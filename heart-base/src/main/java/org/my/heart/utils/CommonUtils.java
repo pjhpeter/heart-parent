@@ -14,7 +14,7 @@ public class CommonUtils {
 	 * 生成全局唯一id
 	 * @return
 	 */
-	public static long generateId() {
+	public static Long generateId() {
 		int hashCode = UUID.randomUUID().toString().hashCode();
 		return (hashCode < 0 ? -hashCode : hashCode) + System.currentTimeMillis();
 	}
