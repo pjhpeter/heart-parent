@@ -4,6 +4,12 @@ import java.io.Serializable;
 
 import com.alibaba.fastjson.JSON;
 
+/**
+ * 请求响应对象
+ * 
+ * @author 彭嘉辉
+ *
+ */
 public class Result implements Serializable {
 
 	private static final long serialVersionUID = -3550425459172313382L;
@@ -12,12 +18,16 @@ public class Result implements Serializable {
 
 	private static final String DEFAULT_FAILURE_MESSAGE = "操作失败";
 
+	// 响应码
 	private int code;
 
+	// 是否成功
 	private Boolean flag;
 
+	// 提示信息
 	private String message;
 
+	// 响应数据
 	private Object data;
 
 	/**
@@ -110,7 +120,7 @@ public class Result implements Serializable {
 		this.data = data;
 		return this;
 	}
-	
+
 	public String toJSONString() {
 		return JSON.toJSONString(this);
 	}
