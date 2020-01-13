@@ -16,6 +16,7 @@ import org.my.heart.entity.Result;
 public class ResponseUtils {
 	
 	public static void buildResponseBody(HttpServletResponse response, Result result) throws IOException {
+		response.setStatus(200);
 		response.setContentType(ContentType.APPLICATION_JSON_UTF8);
 		response.getWriter().write(result.toJSONString());
 	}
