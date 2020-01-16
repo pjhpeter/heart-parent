@@ -14,7 +14,14 @@ import org.my.heart.entity.Result;
  *
  */
 public class ResponseUtils {
-	
+
+	/**
+	 * 返回响应信息
+	 * 
+	 * @param response
+	 * @param result
+	 * @throws IOException
+	 */
 	public static void buildResponseBody(HttpServletResponse response, Result result) throws IOException {
 		response.setStatus(200);
 		response.setContentType(ContentType.APPLICATION_JSON_UTF8);
